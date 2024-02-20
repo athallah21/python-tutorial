@@ -1,11 +1,23 @@
 game = input("Masukkan nama game: ")
-print("nama game anda adalah ", game)
+print("Nama game Anda adalah", game)
 
-biner= bool(int(input("masukkan angka biner yang ingin dikirim ke server (1-9): ")))
+while True:
+    try:
+        biner_input = int(input("Masukkan angka biner yang ingin dikirim ke server (1-9): "))
+        if 1 <= biner_input <= 9:
+            biner = bool(biner_input)
+            print("HASIL biner =", biner, "type =", type(biner))
+            break
+        else:
+            print("Mohon masukkan angka antara 1 hingga 9.")
+    except ValueError:
+        print("Masukan tidak valid. Harap masukkan angka antara 1 hingga 9.")
 
-if(biner==True):
-    print("HASIL biner = ", biner , "type= ", type(biner))
-elif(biner==False):
-    num = int(input("masukkan angka  yang ingin dikonversi ke bool :"))
-print("HASIL biner = ", bool(num) , "type= ", type(bool(num)))
-
+while True:
+    try:
+        angka = int(input("Masukkan angka yang ingin dikonversi ke boolean: "))
+        bool_angka = bool(angka)
+        print("HASIL konversi ke boolean:", bool_angka, "type =", type(bool_angka))
+        break
+    except ValueError:
+        print("Masukan tidak valid. Harap masukkan angka.")
