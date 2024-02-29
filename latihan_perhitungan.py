@@ -17,6 +17,7 @@ print("suhu  =", fahrenheit,"FAHRENHEIT")
 kelvin= celcius + 273
 print ("suhu =", kelvin, "KELVIN")
 
+## konversi suhu dari reamur
 reamur= float(input("Masukkan  Suhu Dalam Reamur: "))
 print("suhu = ", reamur, "REAMUR")
 
